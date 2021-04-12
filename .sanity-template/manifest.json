@@ -1,0 +1,40 @@
+{
+  "version": 2,
+  "title": "Next.js Landingpage Starter",
+  "description": "A sanity starter-template for creating landingpages using Next.js, typescript and tailwindcss.",
+  "previewMedia": {
+    "type": "image",
+    "src": ".sanity-template/assets/frontend.png",
+    "alt": "Next.js frontend with Sanity data displaying"
+  },
+  "technologies": [
+    {
+      "id": "nextjs",
+      "name": "Next.js",
+      "url": "https://nextjs.org"
+    }
+  ],
+  "deployment": {
+    "provider": "vercel",
+    "studio": {
+      "basePath": "/studio"
+    },
+    "envVars": {
+      "dataset": ["SANITY_PROJECT_DATASET"],
+      "projectId": ["SANITY_PROJECT_ID"]
+    },
+    "tokens": [
+      {
+        "label": "livePreview",
+        "role": "write",
+        "envVar": "SANITY_API_TOKEN"
+      }
+    ],
+    "corsOrigins": [
+      {
+        "origin": "http://localhost:3000",
+        "allowCredentials": true
+      }
+    ]
+  }
+}
